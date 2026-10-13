@@ -1,0 +1,55 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# next.js
+.next/
+out/
+
+# production
+build/
+dist/
+
+# env files — NEVER commit. .env holds AUTH_SECRET and the DATABASE_URL.
+.env
+.env*.local
+!.env.example
+
+# typescript
+*.tsbuildinfo
+
+# prisma
+/app/generated/prisma
+/generated/prisma
+
+# test output
+coverage/
+
+# stray dev artifacts kept out of history
+tsc-out.txt
+tsc-err.txt
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# token-minting helper removed 2026-10-07 (see docs/CROSS-REPO-AUDIT-2026-10-07.md).
+# Guard retained in case the file is restored from a backup.
+mint-tmp.*
+uat-state.json
+
+# vercel
+.vercel
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

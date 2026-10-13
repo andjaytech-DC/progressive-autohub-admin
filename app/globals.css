@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #090b0d;
+  --fg: #ffffff;
+  --muted: #64748b;
+  --accent: #ffc700;
+  --card: #161b21;
+  --border: #21262d;
+}
+
+/* Map the raw CSS variables above to Tailwind v4 utility tokens.
+   Without this block, classes like bg-card, text-content, border-line,
+   border-border, and bg-surface generate no CSS — the admin renders
+   with no colors beyond what utility-class hex values provide. */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-card: var(--card);
+  --color-surface: var(--card);
+  --color-content: var(--fg);
+  --color-content-muted: var(--muted);
+  --color-line: var(--border);
+  --color-border: var(--border);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: sans-serif;
+}
